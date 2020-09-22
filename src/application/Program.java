@@ -25,6 +25,10 @@ public class Program {
 		for (File files : file) {
 			System.out.println(files);
 		}
+		
+		boolean success = new File(strPath + "\\subdir").mkdir();
+		System.out.println("Directory created successfully: " + success);
+		
 		sc.close();
 	}
 
