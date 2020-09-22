@@ -13,13 +13,18 @@ public class Program {
 		String strPath = sc.nextLine();
 		
 		File path = new File(strPath);
-		
+		System.out.println();
 		File[] folders = path.listFiles(File::isDirectory);
-		System.out.println("FOLDERS: ");
+		System.out.println("*** FOLDERS ***");
 		for (File folder : folders) {
 			System.out.println(folder);
 		}
-		
+		System.out.println();
+		File[] file = path.listFiles(File::isFile);
+		System.out.println("**** FILES ****");
+		for (File files : file) {
+			System.out.println(files);
+		}
 		sc.close();
 	}
 
